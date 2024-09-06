@@ -46,7 +46,7 @@ public class SpringEventsApplication {
     @Bean
     ApplicationListener<ApplicationReadyEvent> publisher(ApplicationEventPublisher publisher) {
         return args -> {
-//            publisher.publishEvent(new MyCustomEvent("event 1 process"));
+            publisher.publishEvent(new MyCustomEvent("event 1 process"));
             System.out.println(Thread.currentThread().getName() + " published called");
         };
     }
